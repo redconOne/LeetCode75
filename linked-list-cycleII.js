@@ -50,3 +50,14 @@ const intersection = (head) => {
   }
   return null;
 };
+
+// First we work on the intersection helper function. This function is used to help see if there is a loop or not.
+// We use a slow and fast pointer. If fast pointer ever hits null that means there is no loop
+// If fast pointer is equal to slow pointer then there is definitely a loop. We then return that intersection node
+
+// After writing intersection we work on the main detect function
+// if head or head.next are null return null
+// run helper function and set that to intersectNode
+// if intersectNode is null (aka there is no loop) return null
+// increment startNode and intersectNode one at a time until they meet. They will meet at the intersection.
+// return either node because they will both be at the same location.
